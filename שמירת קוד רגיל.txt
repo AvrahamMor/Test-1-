@@ -1,0 +1,3 @@
+מגניב לשמור את זה 
+
+            <iframe name="content-frame" src="about.html"></iframe>

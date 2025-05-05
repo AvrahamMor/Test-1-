@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>טופס הרשמה</title>
+    <link rel="stylesheet" href="Form.css">
+</head>
+<body>
+
+    <h1>טופס הרשמה</h1>
+
+    <div class="form-container">
+        <form id="registration-form">
+            <label for="fullName">שם מלא:</label>
+            <input type="text" id="fullName" required>
+
+            <label for="email">אימייל:</label>
+            <input type="email" id="email" required>
+
+            <label for="phone">טלפון:</label>
+            <input type="tel" id="phone" required>
+
+            <label for="birthdate">תאריך לידה:</label>
+            <input type="date" id="birthdate" required>
+
+            <label for="address">כתובת למשלוח:</label>
+            <input type="text" id="address" required>
+
+            <div class="buttons">
+                <button type="reset">אפס</button>
+                <button type="button" id="submit-btn">שלח</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="output-container"></div>
+
+    <script src="Form.js"></script>
+
+</body>
+</html>

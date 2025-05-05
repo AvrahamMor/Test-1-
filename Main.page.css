@@ -1,0 +1,288 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Header */
+
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    background: #d9534f;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: flex-start; /* מכוון את כל האלמנטים להתחלה */
+    align-items: center;
+    padding: 10px;
+    position: relative;
+}
+
+.header-top .logo {
+    width: 120px;
+}
+
+.user-icon {
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px; /* מבטיח שהאייקון יהיה צמוד לימין */
+    margin-top: -80px;
+}
+
+.search-bar {
+    flex: 1;
+    padding: 5px;
+    margin: 0 10px;
+}
+
+/* מצב לילה */
+.night-mode {
+    background-color: #222;
+    color: white;
+}
+
+.night-mode header, 
+.night-mode footer {
+    background-color: #111;
+}
+
+.night-mode .container {
+    background-color: #333;
+}
+
+
+
+
+#theme-toggle, #login-btn {
+    cursor: pointer;
+    padding: 8px 15px;
+    border: none;
+    background: white;
+    color: black;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* סרגל כלים */
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #c9302c;
+    
+}
+
+/* מבנה עמוד */
+.container {
+    display: flex;
+    flex: 1;
+}
+
+/* תפריט צדדי */
+nav {
+    width: 20%;
+    background: #484646;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+nav ul li {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    background: #ddd;
+    margin: 5px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 100%;
+}
+
+/* תוכן ראשי */
+main {
+    flex: 1;
+    padding: 15px;
+    background: #484646;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* תוכן צדדי */
+aside {
+    width: 20%;
+    background: #484646;
+    padding: 15px;
+}
+
+/* Footer */
+/* סגנון כללי של ה-Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+/* קונטיינר העמודות */
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* כל עמודה */
+.footer-column {
+    width: 100%;
+    max-width: 300px; /* מגביל את הרוחב ל-300px */
+    text-align: center;
+}
+
+/* כותרות בעמודות */
+.footer-column h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* טקסט בעמודות */
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 auto;
+}
+
+/* אזור זכויות יוצרים */
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+/* Media Queries - התאמות למסכים קטנים */
+@media screen and (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        width: 100%;
+    }
+}
+
+
+/* Media Queries */
+
+/* מסכים בגודל בינוני (טאבלטים) */
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+
+    nav, aside {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .search-bar {
+        width: 80%;
+    }
+}
+
+/* מסכים קטנים (טלפונים) */
+@media screen and (max-width: 768px) {
+    .header-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    nav ul li {
+        padding: 8px;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    iframe {
+        height: auto;
+    }
+
+    footer {
+        padding: 5px;
+        font-size: 14px;
+    }
+}
+
+/* מסכים קטנים במיוחד */
+@media screen and (max-width: 480px) {
+    .search-bar {
+        width: 90%;
+    }
+
+    .header-top .logo {
+        width: 100px;
+    }
+
+    #theme-toggle, #login-btn {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+
+    nav ul li {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+
+

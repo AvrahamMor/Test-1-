@@ -1,0 +1,168 @@
+/* סגנון כללי */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f9f9f9;
+    direction: rtl; /* תומך בשפה העברית */
+}
+
+/* חלק I - פרטי העסק */
+.company-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* הכותרות יהיו בצד ימין והלוגו בשמאל */
+    background-color: #d9534f;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: right;
+    gap: 5px; /* מצמצם את הרווח בין הכותרות ללוגו */
+    max-width: 900px;
+    margin: auto;
+}
+
+/* תמונת הלוגו */
+.company-info .logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* תמונה עגולה */
+    order: 2; /* מעביר את הלוגו לצד שמאל */
+    margin-right: 0; /* מבטל ריווח נוסף */
+}
+
+/* כותרות בחלק I */
+.company-text {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    flex-grow: 1;
+    order: 1; /* מבטיח שהכותרות מוצגות לפני הלוגו (מימין) */
+}
+
+/* כותרת ראשית */
+.company-text h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* כותרת משנית */
+.company-text h3 {
+    font-size: 18px;
+    color: #fbfbfb; /* כותרת משנית בצבע בהיר יותר */
+    margin: 3px 0;
+}
+
+/* חלק II - תוכן ארוך */
+.company-description {
+    max-width: 900px;
+    margin: 30px auto;
+    text-align: right;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    direction: rtl;
+    line-height: 1.8;
+}
+
+.company-description h2 {
+    color: #d9534f;
+}
+
+/* חלק III - קישורים לרשתות החברתיות */
+.social-links {
+    margin-top: 40px;
+    padding: 20px;
+    background: #ddd;
+    text-align: center;
+}
+
+.social-links h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* אייקונים - תמונות קישור */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* 🖥️ Media Queries - התאמות למסכים קטנים */
+@media screen and (max-width: 768px) {
+    .company-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .company-text {
+        text-align: center;
+    }
+
+    .company-info .logo {
+        margin: 10px 0; /* מרכז את הלוגו בטאבלטים */
+    }
+
+    .company-description {
+        width: 90%;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+    }
+
+    .social-icons img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* מסכים קטנים מאוד (ניידים) */
+@media screen and (max-width: 480px) {
+    .company-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .company-text {
+        text-align: center;
+    }
+
+    .company-info .logo {
+        width: 80px;
+        height: 80px;
+        margin: 10px 0; /* מרכז את הלוגו */
+    }
+
+    .company-description {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .social-icons img {
+        width: 60px;
+        height: 60px;
+    }
+}
